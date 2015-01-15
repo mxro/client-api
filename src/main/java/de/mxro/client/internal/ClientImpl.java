@@ -10,6 +10,8 @@ import de.mxro.async.log.LogsConfiguration;
 import de.mxro.async.properties.PropertiesConfiguration;
 import de.mxro.async.properties.PropertyNode;
 import de.mxro.client.Client;
+import de.mxro.concurrency.Concurrency;
+import de.mxro.concurrency.configuration.ConcurrencyConfigurations;
 import de.mxro.factories.Factories;
 import de.mxro.factories.FactoryCollection;
 import de.mxro.fn.Success;
@@ -27,6 +29,7 @@ public class ClientImpl implements Client {
     private PropertyNode state;
     private PropertyNode logs;
     private final PromiseFactory promiseFactory;
+    private Concurrency concurrency;
 
     @Override
     public FactoryCollection factories() {
@@ -113,5 +116,21 @@ public class ClientImpl implements Client {
             }
         });
 
+    }
+
+    @Override
+    public Concurrency concurrency() {
+        if (this.concurrency == null) {
+            this.concurrency = (Concurrency) factories().create(ConcurrencyConfigurations.any(),
+                    Factories.noDependencies());
+        }
+
+        return this.concurrency;
+    }
+
+    @Override
+    public <R> Promise<R> promise(final Operation<R> operation) {
+        // TODO Auto-generated method stub
+        return null;
     }
 }
