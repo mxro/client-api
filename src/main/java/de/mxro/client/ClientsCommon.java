@@ -1,5 +1,8 @@
 package de.mxro.client;
 
+import de.mxro.client.internal.ClientImpl;
+import de.mxro.promise.PromisesCommon;
+
 /**
  * Entry-point for creating cross-platform clients.
  * 
@@ -7,5 +10,16 @@ package de.mxro.client;
  *
  */
 public class ClientsCommon {
+
+    public Client create() {
+        return new ClientImpl();
+
+    }
+
+    public Client registerPortableFactories(final Client forClient) {
+        forClient.factories().register(PromisesCommon.createUnsafePromiseFactory());
+
+        return forClient;
+    }
 
 }
