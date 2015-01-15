@@ -22,6 +22,18 @@
 	<dependencies>
 
 		<dependency>
+			<groupId>de.mxro.metrics</groupId>
+			<artifactId>metrics</artifactId>
+			<version>0.0.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>de.mxro.async.log</groupId>
+			<artifactId>async-log</artifactId>
+			<version>0.0.2</version>
+		</dependency>
+
+		<dependency>
 			<groupId>de.mxro.factories</groupId>
 			<artifactId>factories</artifactId>
 			<version>0.0.3</version>
