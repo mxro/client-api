@@ -14,7 +14,7 @@ import de.mxro.promise.PromisesCommon;
  */
 public class ClientsCommon {
 
-    public static Client create() {
+    public static Client createPortable() {
         return new ClientImpl();
 
     }
