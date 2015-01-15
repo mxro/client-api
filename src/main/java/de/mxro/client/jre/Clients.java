@@ -4,13 +4,22 @@ import de.mxro.async.log.jre.Logs;
 import de.mxro.async.properties.jre.Properties;
 import de.mxro.client.Client;
 import de.mxro.client.ClientsCommon;
+import de.mxro.client.internal.ClientImpl;
 import de.mxro.concurrency.jre.ConcurrencyJre;
 import de.mxro.metrics.jre.Metrics;
 import de.mxro.promise.jre.Promises;
 
 public class Clients extends ClientsCommon {
 
-    public static Client registerFactories(final Client forClient) {
+    public static Client create() {
+        final Client client = new ClientImpl();
+
+        registerFactories(client);
+
+        return client;
+    }
+
+    private static Client registerFactories(final Client forClient) {
         forClient.factories().register(Promises.createPromiseFactory());
 
         forClient.factories().register(Properties.createPropertiesFactory());

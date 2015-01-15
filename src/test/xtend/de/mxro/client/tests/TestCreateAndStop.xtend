@@ -14,9 +14,8 @@ class TestCreateAndStop {
 	@Test
 	def void test() {
 		
-		var client = Clients.createPortable
-		
-		
+		var client = Clients.create
+
 		client.logs.record(Logs.string(this, "I was there."))
 		
 		client.metrics.record(Metrics.increment("counter"))

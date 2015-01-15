@@ -21,7 +21,7 @@ import org.junit.internal.ArrayComparisonFailure;
 public class TestCreateAndStop {
   @Test
   public void test() {
-    Client client = Clients.createPortable();
+    Client client = Clients.create();
     PropertyNode _logs = client.logs();
     PropertyOperation<String> _string = Logs.string(this, "I was there.");
     _logs.<String>record(_string);

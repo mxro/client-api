@@ -82,7 +82,7 @@ public class ClientImpl implements Client {
     @Override
     public Promise<Success> stop() {
 
-        return promiseFactory.promise(new Operation<Success>() {
+        return promise(new Operation<Success>() {
 
             @Override
             public void apply(final ValueCallback<Success> callback) {
