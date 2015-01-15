@@ -71,6 +71,46 @@ application.
 client.stop().get();
 ```
 
+## Maven Dependency
 
+```xml
+<dependency>
+    <groupId>de.mxro.client</groupId>
+	<artifactId>client-api</artifactId>
+	<version>[latest version]</version>
+</dependency>
+```
+
+Find latest version [here](http://modules.appjangle.com/client-api/latest/project-summary.html).
+
+Add repository if required:
+
+```xml
+<repositories>
+	<repository>
+		<id>Appjangle Releases</id>
+		<url>http://maven.appjangle.com/appjangle/releases</url>
+	</repository>
+</repositories>
+```
+
+## Compatibility
+
+This project is compatible with the following environments:
+
+- Java 1.6+
+- GWT 2.5.0+
+- Android (any)
+- OSGi (any)
+
+## Further Resources
+
+- [JavaDocs](http://modules.appjangle.com/client-api/latest/apidocs/)
+- [Project Reports](http://modules.appjangle.com/client-api/latest/project-reports.html)
+- [Rendered README](http://documentup.com/mxro/client-api)
+- [ReadTheDocs](http://async-log.rtfd.org/)
+
+[![Documentation Status](https://readthedocs.org/projects/async-log/badge/?version=latest)](https://readthedocs.org/projects/async-log/?badge=latest)
+  
 
 
