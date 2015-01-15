@@ -44,5 +44,7 @@ client.metrics().record(Metrics.value("stat1", 300));
 String metric = client.metrics().retrieve("stat1").render().get();
 ```
 
+Metrics are based on the [Lightweight Java Metrics](https://github.com/mxro/lightweight-java-metrics) project.
 
+### 
 
