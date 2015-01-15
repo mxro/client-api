@@ -1,9 +1,13 @@
 package de.mxro.client.internal;
 
+import de.mxro.async.Operation;
 import de.mxro.async.properties.PropertyNode;
 import de.mxro.client.Client;
 import de.mxro.factories.Factories;
 import de.mxro.factories.FactoryCollection;
+import de.mxro.fn.Success;
+import de.mxro.metrics.MetricsConfiguration;
+import de.mxro.promise.Promise;
 import de.mxro.service.ServiceRegistry;
 import de.mxro.service.Services;
 
@@ -11,6 +15,7 @@ public class ClientImpl implements Client {
 
     private FactoryCollection factories;
     private ServiceRegistry services;
+    private PropertyNode metrics;
 
     @Override
     public FactoryCollection factories() {
@@ -36,8 +41,10 @@ public class ClientImpl implements Client {
 
     @Override
     public PropertyNode metrics() {
-        // TODO Auto-generated method stub
-        return null;
+        if (this.metrics == null) {
+            this.metrics = (PropertyNode) factories().create(new MetricsConfiguration(), Factories.noDependencies());
+        }
+        return this.metrics;
     }
 
     @Override
@@ -52,4 +59,12 @@ public class ClientImpl implements Client {
         return null;
     }
 
+    @Override
+    public Promise<Success> stop() {
+        final Operation[] toShutdown = new Operation[3];
+
+        if (this. {
+            return null;
+        }
+    }
 }
