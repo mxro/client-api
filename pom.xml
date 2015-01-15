@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<groupId>de.mxro.client</groupId>
 	<artifactId>client-api</artifactId>
 	<version>0.0.2-SNAPSHOT</version>
@@ -24,7 +26,12 @@
 			<artifactId>factories</artifactId>
 			<version>0.0.3</version>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>de.mxro.async.properties</groupId>
+			<artifactId>async-properties</artifactId>
+			<version>0.0.3</version>
+		</dependency>
 
 		<dependency>
 			<artifactId>concurrency-api</artifactId>
@@ -155,8 +162,8 @@
 						</goals>
 						<configuration>
 							<tasks>
-								<delete file="${basedir}/META-INF/MANIFEST.MF"/>
-								<copy file="target/classes/META-INF/MANIFEST.MF" tofile="${basedir}/META-INF/MANIFEST.MF"/>
+								<delete file="${basedir}/META-INF/MANIFEST.MF" />
+								<copy file="target/classes/META-INF/MANIFEST.MF" tofile="${basedir}/META-INF/MANIFEST.MF" />
 							</tasks>
 						</configuration>
 					</execution>
