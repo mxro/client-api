@@ -3,6 +3,8 @@
 	
 	<inherits name='de.mxro.async.properties.Properties' />
 	<inherits name='de.mxro.async.log.Logs' />
+	<inherits name='de.mxro.metrics.Metrics' />
+	<inherits name='de.mxro.service.Service' />
 
 	<!-- Specify the paths for translatable code -->
 	<source path=''>
