@@ -1,5 +1,9 @@
 package de.mxro.client.internal;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import de.mxro.async.AsyncCommon;
 import de.mxro.async.Operation;
 import de.mxro.async.callbacks.ValueCallback;
 import de.mxro.async.log.LogsConfiguration;
@@ -79,7 +83,33 @@ public class ClientImpl implements Client {
 
             @Override
             public void apply(final ValueCallback<Success> callback) {
-                final Operation[] toShutdown = new Operation[3];
+                final List<Operation<Success>> toShutdown = new ArrayList<Operation<Success>>(3);
+
+                if (metrics != null) {
+                    toShutdown.add(metrics.stop());
+                }
+
+                if (state != null) {
+                    toShutdown.add(state.stop());
+                }
+
+                if (logs != null) {
+                    toShutdown.add(logs.stop());
+                }
+
+                AsyncCommon.parallel(toShutdown, new ValueCallback<List<Object>>() {
+
+                    @Override
+                    public void onFailure(final Throwable t) {
+                        callback.onFailure(t);
+                    }
+
+                    @Override
+                    public void onSuccess(final List<Object> value) {
+                        callback.onSuccess(Success.INSTANCE);
+                    }
+
+                });
 
             }
         });
