@@ -1,6 +1,7 @@
 package de.mxro.client.internal;
 
 import de.mxro.async.Operation;
+import de.mxro.async.log.LogsConfiguration;
 import de.mxro.async.properties.PropertiesConfiguration;
 import de.mxro.async.properties.PropertyNode;
 import de.mxro.client.Client;
@@ -18,6 +19,7 @@ public class ClientImpl implements Client {
     private ServiceRegistry services;
     private PropertyNode metrics;
     private PropertyNode state;
+    private PropertyNode logs;
 
     @Override
     public FactoryCollection factories() {
@@ -60,8 +62,10 @@ public class ClientImpl implements Client {
 
     @Override
     public PropertyNode logs() {
-        // TODO Auto-generated method stub
-        return null;
+        if (this.logs == null) {
+            this.logs = (PropertyNode) factories().create(new LogsConfiguration(), Factories.noDependencies());
+        }
+        return this.logs;
     }
 
     @Override
