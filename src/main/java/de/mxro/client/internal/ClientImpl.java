@@ -17,6 +17,7 @@ import de.mxro.factories.FactoryCollection;
 import de.mxro.fn.Success;
 import de.mxro.metrics.MetricsConfiguration;
 import de.mxro.promise.Promise;
+import de.mxro.promise.PromiseConfiguration;
 import de.mxro.promise.helper.PromiseFactory;
 import de.mxro.service.ServiceRegistry;
 import de.mxro.service.Services;
@@ -130,7 +131,10 @@ public class ClientImpl implements Client {
 
     @Override
     public <R> Promise<R> promise(final Operation<R> operation) {
-        // TODO Auto-generated method stub
-        return null;
+        if (promiseFactory == null) {
+            this.promiseFactory = (PromiseFactory) factories().create(new PromiseConfiguration(),
+                    Factories.noDependencies());
+        }
+        return this.promiseFactory.promise(operation);
     }
 }
