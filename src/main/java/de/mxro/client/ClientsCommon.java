@@ -1,6 +1,7 @@
 package de.mxro.client;
 
 import de.mxro.async.log.LogsCommon;
+import de.mxro.async.properties.PropertiesCommon;
 import de.mxro.client.internal.ClientImpl;
 import de.mxro.metrics.MetricsCommon;
 import de.mxro.promise.PromisesCommon;
@@ -21,7 +22,7 @@ public class ClientsCommon {
     public Client registerPortableFactories(final Client forClient) {
         forClient.factories().register(PromisesCommon.createUnsafePromiseFactory());
 
-        forClient.factories().register(PromisesCommon.createUnsafePromiseFactory());
+        forClient.factories().register(PropertiesCommon.createUnsafePropertiesFactory());
 
         forClient.factories().register(MetricsCommon.createUnsafeFactory());
 
