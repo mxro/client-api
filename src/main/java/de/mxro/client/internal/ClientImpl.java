@@ -28,7 +28,7 @@ public class ClientImpl implements Client {
     private PropertyNode metrics;
     private PropertyNode state;
     private PropertyNode logs;
-    private final PromiseFactory promiseFactory;
+    private PromiseFactory promiseFactory;
     private Concurrency concurrency;
 
     @Override
