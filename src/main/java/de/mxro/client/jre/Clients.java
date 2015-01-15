@@ -10,7 +10,7 @@ import de.mxro.promise.jre.Promises;
 
 public class Clients extends ClientsCommon {
 
-    public Client registerFactories(final Client forClient) {
+    public static Client registerFactories(final Client forClient) {
         forClient.factories().register(Promises.createPromiseFactory());
 
         forClient.factories().register(Properties.createPropertiesFactory());

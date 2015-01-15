@@ -14,12 +14,12 @@ import de.mxro.promise.PromisesCommon;
  */
 public class ClientsCommon {
 
-    public Client create() {
+    public static Client create() {
         return new ClientImpl();
 
     }
 
-    public Client registerPortableFactories(final Client forClient) {
+    public static Client registerPortableFactories(final Client forClient) {
         forClient.factories().register(PromisesCommon.createUnsafePromiseFactory());
 
         forClient.factories().register(PropertiesCommon.createUnsafePropertiesFactory());
