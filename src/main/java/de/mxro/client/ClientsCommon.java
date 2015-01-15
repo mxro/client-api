@@ -15,20 +15,18 @@ import de.mxro.promise.PromisesCommon;
 public class ClientsCommon {
 
     public static Client createPortable() {
-        return new ClientImpl();
+        final Client client = new ClientImpl();
 
-    }
+        client.factories().register(PromisesCommon.createUnsafePromiseFactory());
 
-    public static Client registerPortableFactories(final Client forClient) {
-        forClient.factories().register(PromisesCommon.createUnsafePromiseFactory());
+        client.factories().register(PropertiesCommon.createUnsafePropertiesFactory());
 
-        forClient.factories().register(PropertiesCommon.createUnsafePropertiesFactory());
+        client.factories().register(MetricsCommon.createUnsafeFactory());
 
-        forClient.factories().register(MetricsCommon.createUnsafeFactory());
+        client.factories().register(LogsCommon.createUnsafeLogsFactory());
 
-        forClient.factories().register(LogsCommon.createUnsafeLogsFactory());
+        return client;
 
-        return forClient;
     }
 
 }
