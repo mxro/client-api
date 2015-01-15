@@ -46,5 +46,31 @@ String metric = client.metrics().retrieve("stat1").render().get();
 
 Metrics are based on the [Lightweight Java Metrics](https://github.com/mxro/lightweight-java-metrics) project.
 
-### 
+### Promises
+
+The Client API supports the easy creation of promises:
+
+```java
+Promise<String> promise = client.promise(new Operation<String>() {
+    public void apply(ValueCallback<ResultType> callback) {
+       callback.onSuccess("Hello");
+    }
+});
+
+System.out.println("Got: "+promise.get());
+```
+
+More information on promises can be found in the [Java Promise](https://github.com/mxro/java-promise) project.
+
+### Finalizing Clients
+
+Clients need to be finalized since they might perform some work in dedicated threads to minimize the performance impact on the main 
+application.
+
+```java
+client.stop().get();
+```
+
+
+
 
