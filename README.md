@@ -4,6 +4,10 @@ A good way to start developing any client application in Java.
 
 Also see the sister project [Java Server API](https://github.com/mxro/server-api).
 
+**Why** After long trail and error we found a small yet powerful set of core utilities 
+which seem to work well for most client applications in Java. This project is designed to share
+this set and help make a few decisions right at the beginning.
+
 ## Usage
 
 ### Instantiating Clients
