@@ -108,9 +108,10 @@ This project is compatible with the following environments:
 - [JavaDocs](http://modules.appjangle.com/client-api/latest/apidocs/)
 - [Project Reports](http://modules.appjangle.com/client-api/latest/project-reports.html)
 - [Rendered README](http://documentup.com/mxro/client-api)
-- [ReadTheDocs](http://async-log.rtfd.org/)
+- [ReadTheDocs](http://client-api.rtfd.org/)
 
-[![Documentation Status](https://readthedocs.org/projects/async-log/badge/?version=latest)](https://readthedocs.org/projects/async-log/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/client-api/badge/?version=latest)](https://readthedocs.org/projects/client-api/?badge=latest)
+ 
   
 
 
