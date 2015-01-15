@@ -10,7 +10,7 @@ import de.mxro.promise.helper.PromiseFactory;
 import de.mxro.service.ServiceRegistry;
 
 public interface Client extends PromiseFactory {
-    lpk Make client GWT
+
     public FactoryCollection factories();
 
     public ServiceRegistry services();
