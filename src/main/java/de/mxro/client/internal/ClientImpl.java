@@ -1,6 +1,7 @@
 package de.mxro.client.internal;
 
 import de.mxro.async.Operation;
+import de.mxro.async.callbacks.ValueCallback;
 import de.mxro.async.log.LogsConfiguration;
 import de.mxro.async.properties.PropertiesConfiguration;
 import de.mxro.async.properties.PropertyNode;
@@ -10,6 +11,7 @@ import de.mxro.factories.FactoryCollection;
 import de.mxro.fn.Success;
 import de.mxro.metrics.MetricsConfiguration;
 import de.mxro.promise.Promise;
+import de.mxro.promise.helper.PromiseFactory;
 import de.mxro.service.ServiceRegistry;
 import de.mxro.service.Services;
 
@@ -20,6 +22,8 @@ public class ClientImpl implements Client {
     private PropertyNode metrics;
     private PropertyNode state;
     private PropertyNode logs;
+
+    private final PromiseFactory promiseFactory;
 
     @Override
     public FactoryCollection factories() {
@@ -70,10 +74,15 @@ public class ClientImpl implements Client {
 
     @Override
     public Promise<Success> stop() {
-        final Operation[] toShutdown = new Operation[3];
 
-        if (this. {
-            return null;
-        }
+        return promiseFactory.promise(new Operation<Success>() {
+
+            @Override
+            public void apply(final ValueCallback<Success> callback) {
+                final Operation[] toShutdown = new Operation[3];
+
+            }
+        });
+
     }
 }
