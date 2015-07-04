@@ -3,9 +3,6 @@ package de.mxro.client.internal;
 import java.util.ArrayList;
 import java.util.List;
 
-import de.mxro.async.AsyncCommon;
-import de.mxro.async.Operation;
-import de.mxro.async.callbacks.ValueCallback;
 import de.mxro.async.log.LogsConfiguration;
 import de.mxro.async.properties.PropertiesConfiguration;
 import de.mxro.async.properties.PropertyNode;
@@ -21,6 +18,9 @@ import de.mxro.promise.PromiseConfiguration;
 import de.mxro.promise.helper.PromiseFactory;
 import de.mxro.service.ServiceRegistry;
 import de.mxro.service.Services;
+import delight.async.AsyncCommon;
+import delight.async.Operation;
+import delight.async.callbacks.ValueCallback;
 
 public class ClientImpl implements Client {
 
