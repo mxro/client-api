@@ -1,21 +1,38 @@
 package de.mxro.client.tests;
 
+import de.mxro.async.log.jre.Logs;
+import de.mxro.async.properties.PropertyNode;
+import de.mxro.async.properties.PropertyOperation;
+import de.mxro.async.properties.jre.Properties;
+import de.mxro.client.Client;
+import de.mxro.client.jre.Clients;
+import de.mxro.metrics.jre.Metrics;
+import de.mxro.promise.Promise;
+import de.oehme.xtend.junit.JUnit;
+import delight.functional.Success;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure0;
 import org.hamcrest.Matcher;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.internal.ArrayComparisonFailure;
 
-import de.oehme.xtend.junit.JUnit;
-
 @JUnit
 @SuppressWarnings("all")
 public class TestCreateAndStop {
   @Test
   public void test() {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method stop is undefined for the type TestCreateAndStop"
-      + "\nget cannot be resolved");
+    Client client = Clients.create();
+    PropertyNode _logs = client.logs();
+    PropertyOperation<String> _string = Logs.string(this, "I was there.");
+    _logs.<String>record(_string);
+    PropertyNode _metrics = client.metrics();
+    PropertyOperation<Long> _increment = Metrics.increment("counter");
+    _metrics.<Long>record(_increment);
+    PropertyNode _state = client.state();
+    PropertyOperation<Object> _set = Properties.set("123", "456");
+    _state.<Object>record(_set);
+    Promise<Success> _stop = client.stop();
+    _stop.get();
   }
   
   private static void assertArrayEquals(final Object[] expecteds, final Object[] actuals) {
