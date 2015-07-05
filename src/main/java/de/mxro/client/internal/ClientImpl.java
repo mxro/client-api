@@ -1,5 +1,10 @@
 package de.mxro.client.internal;
 
+import delight.async.AsyncCommon;
+import delight.async.Operation;
+import delight.async.callbacks.ValueCallback;
+import delight.functional.Success;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,10 +22,6 @@ import de.mxro.promise.PromiseConfiguration;
 import de.mxro.promise.helper.PromiseFactory;
 import de.mxro.service.ServiceRegistry;
 import de.mxro.service.Services;
-import delight.async.AsyncCommon;
-import delight.async.Operation;
-import delight.async.callbacks.ValueCallback;
-import delight.functional.Success;
 
 public class ClientImpl implements Client {
 
