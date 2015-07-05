@@ -1,10 +1,11 @@
 package de.mxro.client;
 
+import delight.promise.PromisesCommon;
+
 import de.mxro.async.log.LogsCommon;
 import de.mxro.async.properties.PropertiesCommon;
 import de.mxro.client.internal.ClientImpl;
 import de.mxro.metrics.MetricsCommon;
-import de.mxro.promise.PromisesCommon;
 
 /**
  * Entry-point for creating cross-platform clients.

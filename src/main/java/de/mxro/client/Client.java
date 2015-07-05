@@ -3,11 +3,11 @@ package de.mxro.client;
 import delight.async.Operation;
 import delight.factories.FactoryCollection;
 import delight.functional.Success;
+import delight.promise.Promise;
+import delight.promise.helper.PromiseFactory;
 
 import de.mxro.async.properties.PropertyNode;
 import de.mxro.concurrency.Concurrency;
-import de.mxro.promise.Promise;
-import de.mxro.promise.helper.PromiseFactory;
 import de.mxro.service.ServiceRegistry;
 
 public interface Client extends PromiseFactory {
