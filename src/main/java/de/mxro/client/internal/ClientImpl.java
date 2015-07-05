@@ -3,6 +3,8 @@ package de.mxro.client.internal;
 import delight.async.AsyncCommon;
 import delight.async.Operation;
 import delight.async.callbacks.ValueCallback;
+import delight.factories.Factories;
+import delight.factories.FactoryCollection;
 import delight.functional.Success;
 
 import java.util.ArrayList;
@@ -14,8 +16,6 @@ import de.mxro.async.properties.PropertyNode;
 import de.mxro.client.Client;
 import de.mxro.concurrency.Concurrency;
 import de.mxro.concurrency.configuration.ConcurrencyConfigurations;
-import de.mxro.factories.Factories;
-import de.mxro.factories.FactoryCollection;
 import de.mxro.metrics.MetricsConfiguration;
 import de.mxro.promise.Promise;
 import de.mxro.promise.PromiseConfiguration;
