@@ -3,6 +3,8 @@ package de.mxro.client.internal;
 import delight.async.AsyncCommon;
 import delight.async.Operation;
 import delight.async.callbacks.ValueCallback;
+import delight.async.properties.PropertiesConfiguration;
+import delight.async.properties.PropertyNode;
 import delight.concurrency.Concurrency;
 import delight.concurrency.configuration.ConcurrencyConfigurations;
 import delight.factories.Factories;
@@ -16,8 +18,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import de.mxro.async.log.LogsConfiguration;
-import de.mxro.async.properties.PropertiesConfiguration;
-import de.mxro.async.properties.PropertyNode;
 import de.mxro.client.Client;
 import de.mxro.metrics.MetricsConfiguration;
 import de.mxro.service.ServiceRegistry;

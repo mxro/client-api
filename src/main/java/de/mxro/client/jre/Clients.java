@@ -1,10 +1,10 @@
 package de.mxro.client.jre;
 
+import delight.async.properties.jre.Properties;
 import delight.concurrency.jre.ConcurrencyJre;
 import delight.promise.jre.Promises;
 
 import de.mxro.async.log.jre.Logs;
-import de.mxro.async.properties.jre.Properties;
 import de.mxro.client.Client;
 import de.mxro.client.ClientsCommon;
 import de.mxro.client.internal.ClientImpl;

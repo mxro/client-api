@@ -1,10 +1,10 @@
 package de.mxro.client.tests
 
 import de.mxro.async.log.jre.Logs
-import de.mxro.async.properties.jre.Properties
 import de.mxro.client.jre.Clients
 import de.mxro.metrics.jre.Metrics
 import de.oehme.xtend.junit.JUnit
+import delight.async.properties.jre.Properties
 import org.junit.Test
 
 @JUnit

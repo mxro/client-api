@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module rename-to='client'>
 	
-	<inherits name='de.mxro.async.properties.Properties' />
+	<inherits name='delight.async.properties.Properties' />
 	<inherits name='de.mxro.async.log.Logs' />
 	<inherits name='de.mxro.metrics.Metrics' />
 	<inherits name='de.mxro.service.Service' />
