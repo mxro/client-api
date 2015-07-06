@@ -1,5 +1,6 @@
 package de.mxro.client.jre;
 
+import delight.concurrency.jre.ConcurrencyJre;
 import delight.promise.jre.Promises;
 
 import de.mxro.async.log.jre.Logs;
@@ -7,7 +8,6 @@ import de.mxro.async.properties.jre.Properties;
 import de.mxro.client.Client;
 import de.mxro.client.ClientsCommon;
 import de.mxro.client.internal.ClientImpl;
-import de.mxro.concurrency.jre.ConcurrencyJre;
 import de.mxro.metrics.jre.Metrics;
 
 public class Clients extends ClientsCommon {
