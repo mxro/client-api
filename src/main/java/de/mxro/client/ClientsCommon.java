@@ -15,8 +15,8 @@ import de.mxro.metrics.MetricsCommon;
  */
 public class ClientsCommon {
 
-    public static Client createPortable() {
-        final Client client = new ClientImpl();
+    public static BasicClient createPortable() {
+        final BasicClient client = new ClientImpl();
 
         client.factories().register(PromisesCommon.createUnsafePromiseFactory());
 

@@ -18,12 +18,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import de.mxro.async.log.LogsConfiguration;
-import de.mxro.client.Client;
+import de.mxro.client.BasicClient;
 import de.mxro.metrics.MetricsConfiguration;
 import de.mxro.service.ServiceRegistry;
 import de.mxro.service.Services;
 
-public class ClientImpl implements Client {
+public class ClientImpl implements BasicClient {
 
     private FactoryCollection factories;
     private ServiceRegistry services;

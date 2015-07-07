@@ -5,22 +5,22 @@ import delight.concurrency.jre.ConcurrencyJre;
 import delight.promise.jre.Promises;
 
 import de.mxro.async.log.jre.Logs;
-import de.mxro.client.Client;
+import de.mxro.client.BasicClient;
 import de.mxro.client.ClientsCommon;
 import de.mxro.client.internal.ClientImpl;
 import de.mxro.metrics.jre.Metrics;
 
 public class Clients extends ClientsCommon {
 
-    public static Client create() {
-        final Client client = new ClientImpl();
+    public static BasicClient create() {
+        final BasicClient client = new ClientImpl();
 
         registerFactories(client);
 
         return client;
     }
 
-    private static Client registerFactories(final Client forClient) {
+    private static BasicClient registerFactories(final BasicClient forClient) {
         forClient.factories().register(Promises.createPromiseFactory());
 
         forClient.factories().register(Properties.createPropertiesFactory());
