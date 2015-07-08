@@ -1,6 +1,6 @@
 package de.mxro.client.tests
 
-import org.javadelight.log.jre.Logs
+import delight.log.jre.Logs
 import de.mxro.client.jre.Clients
 import de.mxro.metrics.jre.Metrics
 import de.oehme.xtend.junit.JUnit

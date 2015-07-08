@@ -10,14 +10,13 @@ import delight.concurrency.configuration.ConcurrencyConfigurations;
 import delight.factories.Factories;
 import delight.factories.FactoryCollection;
 import delight.functional.Success;
+import delight.log.LogsConfiguration;
 import delight.promise.Promise;
 import delight.promise.PromiseConfiguration;
 import delight.promise.helper.PromiseFactory;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import org.javadelight.log.LogsConfiguration;
 
 import de.mxro.client.BasicClient;
 import de.mxro.metrics.MetricsConfiguration;

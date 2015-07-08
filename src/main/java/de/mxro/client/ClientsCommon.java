@@ -1,9 +1,8 @@
 package de.mxro.client;
 
 import delight.async.properties.PropertiesCommon;
+import delight.log.LogsCommon;
 import delight.promise.PromisesCommon;
-
-import org.javadelight.log.LogsCommon;
 
 import de.mxro.client.internal.ClientImpl;
 import de.mxro.metrics.MetricsCommon;
