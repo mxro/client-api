@@ -4,7 +4,8 @@ import delight.async.properties.jre.Properties;
 import delight.concurrency.jre.ConcurrencyJre;
 import delight.promise.jre.Promises;
 
-import de.mxro.async.log.jre.Logs;
+import org.javadelight.log.jre.Logs;
+
 import de.mxro.client.BasicClient;
 import de.mxro.client.ClientsCommon;
 import de.mxro.client.internal.ClientImpl;

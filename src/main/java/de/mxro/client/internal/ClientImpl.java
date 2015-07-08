@@ -17,7 +17,8 @@ import delight.promise.helper.PromiseFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-import de.mxro.async.log.LogsConfiguration;
+import org.javadelight.log.LogsConfiguration;
+
 import de.mxro.client.BasicClient;
 import de.mxro.metrics.MetricsConfiguration;
 import de.mxro.service.ServiceRegistry;

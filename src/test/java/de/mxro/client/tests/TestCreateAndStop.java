@@ -1,6 +1,5 @@
 package de.mxro.client.tests;
 
-import de.mxro.async.log.jre.Logs;
 import de.mxro.client.BasicClient;
 import de.mxro.client.jre.Clients;
 import de.mxro.metrics.jre.Metrics;
@@ -12,6 +11,7 @@ import delight.functional.Success;
 import delight.promise.Promise;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure0;
 import org.hamcrest.Matcher;
+import org.javadelight.log.jre.Logs;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.internal.ArrayComparisonFailure;
