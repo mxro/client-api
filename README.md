@@ -1,3 +1,7 @@
+# MOVED
+
+This project has moved to [javadelight/delight-clients](https://github.com/javadelight/delight-clients).
+
 # Java Client API
 
 A good way to start developing any client application in Java. 
